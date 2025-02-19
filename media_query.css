@@ -1,0 +1,110 @@
+/*-----------------------------------*\ 
+  #media_query.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 @codewithsadee 
+ */
+
+/*-----------------------------------*\ 
+  #for large mobile
+\*-----------------------------------*/
+
+@media (min-width: 450px) {
+  :root {
+    --fs-1: 54px;
+    --fs-2: 36px;
+    --fs-3: 20px;
+  }
+
+  .home-text {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .home .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .dialog-1 { top: 15%; }
+  .dialog-2 { right: 15%; }
+  .shape-1 {
+    top: 10%;
+    left: 15%;
+  }
+}
+
+/*-----------------------------------*\ 
+  #for tablet
+\*-----------------------------------*/
+
+@media (min-width: 570px) {
+  :root {
+    --mw: 550px;
+  }
+
+  .navbar-wrapper,
+  .home,
+  .about,
+  .services,
+  .product,
+  .testimonials,
+  .footer-wrapper {
+    max-width: var(--mw);
+    margin-inline: auto;
+  }
+}
+
+/*-----------------------------------*\ 
+  #for mobile phones
+\*-----------------------------------*/
+
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .input-group input {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .btn-custom {
+    font-size: 1rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody, tr, td {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    text-align: left;
+    font-weight: bold;
+  }
+}
